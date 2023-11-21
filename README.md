@@ -5,8 +5,8 @@ JESUS GARCIA ALEMANY
 1. **Clonar el Repositorio:**
 
    ```bash
-   git clone https://github.com/tu-usuario/nombre-de-tu-repo.git
-   cd nombre-de-tu-repo
+   git clone https://github.com/xusoalemany/jegaalexamendaw
+   cd jegaalexamendaw
 ## Construir y Levantar los Contenedores:
 
 docker-compose up --build
