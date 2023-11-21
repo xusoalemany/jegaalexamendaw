@@ -1,0 +1,6 @@
+# Dockerfile para el servicio web
+FROM php:apache
+
+COPY desarrollo/index.php /var/www/html/
+
+EXPOSE 80
