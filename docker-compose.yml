@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    ports:
+      - "80:80"
+    volumes:
+      - ./desarrollo:/var/www/html
+    depends_on:
+      - database
+    links:
+      - database:mysql
+
+  database:
+    build:
+      context: .
+      dockerfile: Dockerfile.db
+    ports:
+      - "3306:3306"
+
+  adminphp:
+    build:
+      context: .
+      dockerfile: Dockerfile.phpmyadmin
+    links:
+      - database:db
+    environment:
+      PMA_HOST: database        # Cambiado a database
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: jegaal
+      MYSQL_PASSWORD: root
+    ports:
+      - "8000:80"

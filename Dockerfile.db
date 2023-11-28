@@ -1,7 +1,7 @@
 # Dockerfile para el servicio de la base de datos
 FROM mysql
 
-ENV MYSQL_ROOT_PASSWORD tu_contraseña_de_root
+ENV MYSQL_ROOT_PASSWORD root
 ENV MYSQL_DATABASE jegaal
 ENV MYSQL_USER jegaal
 ENV MYSQL_PASSWORD root
